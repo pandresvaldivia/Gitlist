@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 
-const LayoutStyled = styled.div`
+const LayoutStyled = styled.main`
 	box-sizing: border-box;
 	padding-inline: 1rem;
 	padding-block-start: 1.5rem;
@@ -10,7 +10,6 @@ const LayoutStyled = styled.div`
 	margin: auto;
 	@media screen and (min-width: 768px) {
 		display: grid;
-		border: 1px solid red;
 		grid-template-columns: 17.375rem 1fr;
 		grid-template-rows: auto 1fr;
 		grid-template-areas: 'profile filters' 'profile repolist';

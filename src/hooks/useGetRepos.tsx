@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
+import { Repo } from '../interfaces/repo.interface';
 
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 const useGetRepos = (username = 'pandresvaldivia') => {
 	const [data, setData] = useState({
-		repos: [],
+		repos: [] as Repo[],
 		isLoading: true,
 	});
 

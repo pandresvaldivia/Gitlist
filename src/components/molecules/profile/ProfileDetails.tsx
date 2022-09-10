@@ -3,7 +3,7 @@ import { getTwitterUrl } from '../../../helpers/string.helper';
 import { useAppContext } from '../../../contexts/App.context';
 import { LINK, LOCATION } from '../../icons/L_icons';
 import { TWITTER } from '../../icons/T_icons';
-import StatItem from '../StatItem';
+import StatItem from '../items/StatItem';
 
 const ProfileDetailsStyled = styled.ul`
 	display: flex;

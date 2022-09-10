@@ -4,7 +4,8 @@ export interface Repo {
 	visibility: string;
 	language: string;
 	html_url: string;
-	updated_at: Date;
+	updated_at: string;
 	stargazers_count: number;
 	forks: number;
+	topics: string[];
 }

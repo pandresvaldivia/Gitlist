@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import Icon from '../atoms/Icon';
-import { Icon as IconClass } from '../icons/icon.class';
+import Icon from '../../atoms/Icon';
+import { Icon as IconClass } from '../../icons/icon.class';
 
 const StatItemStyled = styled.li`
 	display: flex;
@@ -9,20 +9,24 @@ const StatItemStyled = styled.li`
 	gap: 0.5rem;
 	font: var(--body2-regular);
 
-	a {
+	a,
+	span {
 		color: var(--grey-2);
-		text-decoration: none;
 	}
 
 	a:hover {
 		text-decoration: underline;
 	}
+
+	&.is-small {
+		font: var(--caption-regular);
+	}
 `;
 
-const StatItem = ({ icon, children }: StatItemProps) => {
+const StatItem = ({ icon, children, className = '' }: StatItemProps) => {
 	return (
-		<StatItemStyled>
-			<Icon icon={icon} size="1.5rem" />
+		<StatItemStyled className={className}>
+			<Icon icon={icon} size="1.65em" />
 			<span>{children}</span>
 		</StatItemStyled>
 	);
@@ -31,6 +35,7 @@ const StatItem = ({ icon, children }: StatItemProps) => {
 type StatItemProps = {
 	icon: IconClass;
 	children?: ReactNode;
+	className?: string;
 };
 
 export default StatItem;

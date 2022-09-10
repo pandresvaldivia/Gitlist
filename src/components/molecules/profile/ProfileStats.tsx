@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import StatItem from '../StatItem';
 import { useAppContext } from '../../../contexts/App.context';
 import { USER } from '../../icons/U_icons';
 import { abbreviateNumber } from '../../../helpers/number.helper';
 import { STAR } from '../../icons/S_icons';
+import StatItem from '../items/StatItem';
 
 const ProfileStatsStyled = styled.div`
 	.stats__list {

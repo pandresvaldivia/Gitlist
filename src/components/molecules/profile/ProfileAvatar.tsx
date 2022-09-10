@@ -16,7 +16,6 @@ const ProfileAvatarStyled = styled.div`
 `;
 
 const ProfileAvatar = ({ image, alt }: ProfileAvatarProps) => {
-	console.log(image);
 	return (
 		<ProfileAvatarStyled>
 			<img className="profile__image" src={image} alt={alt} />

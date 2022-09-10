@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import useGetRepos from '../../hooks/useGetRepos';
+import RepoItem from './items/RepoItem';
 
 const RepolistStyled = styled.div`
 	grid-area: repolist;
-	background: blue;
 `;
 
 const Repolist = ({}: RepolistProps) => {
@@ -13,9 +13,13 @@ const Repolist = ({}: RepolistProps) => {
 		return <p>Loading...</p>;
 	}
 
-	console.log(repos);
-
-	return <RepolistStyled>repolist</RepolistStyled>;
+	return (
+		<RepolistStyled>
+			{repos.map((repo) => (
+				<RepoItem key={repo.name} repo={repo} />
+			))}
+		</RepolistStyled>
+	);
 };
 
 type RepolistProps = {};
